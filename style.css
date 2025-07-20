@@ -1,0 +1,385 @@
+/* CSS Variables for themes */
+:root {
+    --primary-bg: #f6f8fa;
+    --primary-text: #23272f;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-active: #1e40af;
+    --danger: #e11d48;
+    --safe: #22c55e;
+    --border-radius: 0.5rem;
+    --card-bg: #fff;
+    --border: 1px solid #e5e7eb;
+    --shadow: 0 2px 8px rgba(30, 41, 59, 0.06);
+}
+
+[data-theme="dark"] {
+    --primary-bg: #181a1b;
+    --primary-text: #f3f4f6;
+    --card-bg: #23272f;
+    --border: 1px solid #23272f;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    --accent: #60a5fa;
+    --accent-hover: #3b82f6;
+    --accent-active: #1e40af;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    background: var(--primary-bg);
+    color: var(--primary-text);
+    margin: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+.app-container {
+    max-width: 420px;
+    margin: 2.5rem auto;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    border: var(--border);
+    padding: 2.5rem 2rem 2rem 2rem;
+    box-shadow: var(--shadow);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 2.2rem;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.2rem;
+}
+
+.app-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    background: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.10);
+    transition: box-shadow 0.3s;
+}
+
+.app-logo svg {
+    display: block;
+}
+
+header h1 {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -1.5px;
+    color: var(--primary-text);
+    text-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+}
+
+#theme-toggle {
+    width: 2.2rem;
+    height: 2.2rem;
+    border: none;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px rgba(37, 99, 235, 0.08);
+}
+
+#theme-toggle:after {
+    content: "🌙";
+}
+
+[data-theme="dark"] #theme-toggle:after {
+    content: "☀️";
+}
+
+#theme-toggle:hover,
+#theme-toggle:focus {
+    background: var(--accent-hover);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);
+    outline: none;
+}
+
+#theme-toggle:active {
+    background: var(--accent-active);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-text);
+    padding: 0.2rem 0.9rem;
+    border-radius: 0.3rem;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a.active,
+nav a:hover,
+nav a:focus {
+    background: var(--accent);
+    color: #fff;
+    outline: none;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.18);
+    transform: scale(1.08);
+    text-shadow: 0 1px 6px rgba(37, 99, 235, 0.12);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s, text-shadow 0.2s;
+}
+
+nav button#theme-toggle {
+    margin-left: auto;
+}
+
+main section {
+    margin-bottom: 2.1rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.input-group label {
+    min-width: 60px;
+    font-size: 1rem;
+}
+
+input[type="number"],
+select {
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.3rem;
+    border: var(--border);
+    font-size: 1rem;
+    background: var(--card-bg);
+    color: var(--primary-text);
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+button[type="submit"] {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.8rem 1.4rem;
+    font-size: 1.08rem;
+    cursor: pointer;
+    margin-top: 0.7rem;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(37, 99, 235, 0.08);
+    outline: none;
+}
+
+button[type="submit"],
+#theme-toggle {
+    transition: background 0.2s, box-shadow 0.2s, transform 0.12s;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus,
+#theme-toggle:hover,
+#theme-toggle:focus {
+    background: var(--accent-hover);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.18);
+    transform: scale(1.06);
+    outline: none;
+}
+
+button[type="submit"]:active,
+#theme-toggle:active {
+    background: var(--accent-active);
+    transform: scale(0.98);
+}
+
+#bmi-result {
+    margin-top: 1.2rem;
+    font-size: 1.13rem;
+    font-weight: 500;
+    min-height: 1.5em;
+}
+
+#bmi-result .underweight {
+    color: #60a5fa;
+}
+
+#bmi-result .normal {
+    color: #22c55e;
+}
+
+#bmi-result .overweight {
+    color: #fde047;
+}
+
+#bmi-result .obesity {
+    color: #e11d48;
+}
+
+.bmi-guidelines {
+    background: var(--primary-bg);
+    border-radius: var(--border-radius);
+    border: var(--border);
+    padding: 1.2rem 1rem 1rem 1rem;
+    box-shadow: var(--shadow);
+}
+
+.bmi-guidelines ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.1rem 0 0 0;
+}
+
+.bmi-guidelines li {
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.bmi-range {
+    display: inline-block;
+    width: 1.3rem;
+    height: 0.6rem;
+    border-radius: 0.2rem;
+}
+
+.bmi-range.underweight {
+    background: #60a5fa;
+}
+
+.bmi-range.normal {
+    background: #22c55e;
+}
+
+.bmi-range.overweight {
+    background: #fde047;
+}
+
+.bmi-range.obesity {
+    background: #e11d48;
+}
+
+#bmi-chart {
+    width: 100%;
+    height: 13px;
+    background: linear-gradient(90deg, #60a5fa 0% 18.5%, #22c55e 18.5% 24.9%, #fde047 24.9% 29.9%, #e11d48 29.9% 100%);
+    border-radius: 6px;
+    margin-bottom: 1.1rem;
+    position: relative;
+}
+
+#bmi-chart .bmi-indicator {
+    position: absolute;
+    top: -4px;
+    width: 2px;
+    height: 21px;
+    background: var(--primary-text);
+    left: 0;
+    transition: left 0.3s;
+}
+
+.bmi-category-detail {
+    border-left: 4px solid var(--accent);
+    background: var(--card-bg);
+    margin-bottom: 1.2rem;
+    padding: 1rem 1.2rem;
+    border-radius: 0.4rem;
+    border: var(--border);
+    box-shadow: none;
+}
+
+.bmi-category-detail.underweight {
+    border-color: #60a5fa;
+}
+
+.bmi-category-detail.normal {
+    border-color: #22c55e;
+}
+
+.bmi-category-detail.overweight {
+    border-color: #fde047;
+}
+
+.bmi-category-detail.obesity {
+    border-color: #e11d48;
+}
+
+.bmi-category-detail h3 {
+    margin-top: 0;
+}
+
+.bmi-description,
+.bmi-notes {
+    background: var(--primary-bg);
+    border-radius: var(--border-radius);
+    border: var(--border);
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    box-shadow: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2.2rem;
+    color: #888;
+    font-size: 0.93rem;
+}
+
+input,
+select,
+button,
+nav,
+.bmi-category-detail,
+.bmi-description,
+.bmi-notes,
+.bmi-guidelines,
+#bmi-result,
+.bmi-label {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif !important;
+}
+
+@media (max-width: 600px) {
+    .app-container {
+        padding: 1.1rem 0.5rem;
+    }
+
+    main section {
+        margin-bottom: 1.1rem;
+    }
+}
