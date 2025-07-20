@@ -375,17 +375,17 @@ nav,
 }
 
 .input-group input[type="number"] {
-    border: 1px solid rgba(37, 60, 120, 0.45);
-    /* dark faded blue, thin */
+    border: 1.5px solid rgba(37, 99, 235, 0.85);
+    /* brighter, more visible blue */
     background: transparent;
     color: var(--primary-text);
     box-shadow: none;
 }
 
 .input-group input[type="number"]:focus {
-    border-color: rgba(37, 60, 120, 0.7);
-    /* slightly stronger on focus */
-    box-shadow: 0 0 0 2px rgba(37, 60, 120, 0.10);
+    border-color: rgba(37, 99, 235, 1);
+    /* fully opaque on focus */
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.18);
     background: transparent;
 }
 
