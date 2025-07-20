@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Info & Health Advice</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo-title">
+                <span class="app-logo" aria-label="BMI Calculator Logo">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <circle cx="18" cy="18" r="16" stroke="#2563eb" stroke-width="3" fill="#fff" />
+                        <rect x="11" y="11" width="14" height="14" rx="7" fill="#2563eb" />
+                    </svg>
+                </span>
+                <h1>BMI Calculator</h1>
+            </div>
+            <nav>
+                <a href="index.html">Calculator</a>
+                <a href="bmi-info.html" class="active">BMI Info</a>
+                <button id="theme-toggle" aria-label="Toggle theme"></button>
+            </nav>
+        </header>
+        <main>
+            <section class="bmi-description">
+                <h2>What is BMI?</h2>
+                <p>BMI (Body Mass Index) is a simple calculation using a person's height and weight. The formula is:
+                    <strong>BMI = weight (kg) / [height (m)]²</strong>. It is used to broadly categorize a person as
+                    underweight, normal weight, overweight, or obese based on tissue mass (muscle, fat, and bone) and
+                    height.
+                </p>
+            </section>
+            <section class="bmi-categories">
+                <h2>BMI Categories & Health Advice</h2>
+                <div class="bmi-category-detail underweight">
+                    <h3>Underweight (BMI &lt; 18.5)</h3>
+                    <ul>
+                        <li>Possible causes: malnutrition, underlying health issues, or high metabolism.</li>
+                        <li><strong>Advice:</strong> Consider a balanced diet with more calories, strength training, and
+                            consult a healthcare provider if needed.</li>
+                    </ul>
+                </div>
+                <div class="bmi-category-detail normal">
+                    <h3>Normal (18.5 ≤ BMI &lt; 24.9)</h3>
+                    <ul>
+                        <li>This range is considered healthy for most adults.</li>
+                        <li><strong>Advice:</strong> Maintain a balanced diet, regular physical activity, and healthy
+                            lifestyle habits.</li>
+                    </ul>
+                </div>
+                <div class="bmi-category-detail overweight">
+                    <h3>Overweight (25 ≤ BMI &lt; 29.9)</h3>
+                    <ul>
+                        <li>Increased risk of cardiovascular diseases, diabetes, and other health issues.</li>
+                        <li><strong>Advice:</strong> Adopt a healthier diet, increase physical activity, and monitor
+                            weight regularly. Seek professional advice if needed.</li>
+                    </ul>
+                </div>
+                <div class="bmi-category-detail obesity">
+                    <h3>Obesity (BMI ≥ 30)</h3>
+                    <ul>
+                        <li>High risk of serious health conditions such as heart disease, diabetes, and hypertension.
+                        </li>
+                        <li><strong>Advice:</strong> Consult a healthcare provider for a personalized plan. Focus on a
+                            nutritious diet, regular exercise, and behavioral changes.</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="bmi-notes">
+                <h2>Important Notes</h2>
+                <ul>
+                    <li>BMI is a useful screening tool but does not directly assess body fat or health.</li>
+                    <li>Other factors like age, gender, muscle mass, and ethnicity can affect BMI interpretation.</li>
+                    <li>Always consult a healthcare professional for a comprehensive health assessment.</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 BMI Calculator. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
